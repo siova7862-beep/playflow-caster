@@ -14,7 +14,102 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      accesses: {
+        Row: {
+          created_at: string
+          expires_at: string
+          host: string
+          id: string
+          is_active: boolean
+          password: string
+          port: number
+          username: string
+        }
+        Insert: {
+          created_at?: string
+          expires_at: string
+          host?: string
+          id?: string
+          is_active?: boolean
+          password: string
+          port?: number
+          username: string
+        }
+        Update: {
+          created_at?: string
+          expires_at?: string
+          host?: string
+          id?: string
+          is_active?: boolean
+          password?: string
+          port?: number
+          username?: string
+        }
+        Relationships: []
+      }
+      notices: {
+        Row: {
+          admin_name: string
+          created_at: string
+          id: string
+          message: string
+          title: string
+        }
+        Insert: {
+          admin_name?: string
+          created_at?: string
+          id?: string
+          message: string
+          title: string
+        }
+        Update: {
+          admin_name?: string
+          created_at?: string
+          id?: string
+          message?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      watch_progress: {
+        Row: {
+          content_group: string
+          content_logo: string
+          content_name: string
+          content_url: string
+          created_at: string
+          id: string
+          progress_time: number
+          total_duration: number
+          updated_at: string
+          username: string
+        }
+        Insert: {
+          content_group?: string
+          content_logo?: string
+          content_name: string
+          content_url: string
+          created_at?: string
+          id?: string
+          progress_time?: number
+          total_duration?: number
+          updated_at?: string
+          username: string
+        }
+        Update: {
+          content_group?: string
+          content_logo?: string
+          content_name?: string
+          content_url?: string
+          created_at?: string
+          id?: string
+          progress_time?: number
+          total_duration?: number
+          updated_at?: string
+          username?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
